@@ -1,141 +1,210 @@
-
-//var mynumber = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-
-//var x = Math.floor(Math.random() * 4 + 1);
-//var rand = mynumber[x];
-
-//function setup(){
-//    createCanvas(440,400);
-//} 
-//function draw(){
-    //if (rand > 5)
-      //  fill(0,0,0)
-       // ellipse(20, 120, 25, 25)
-    //else
-       // fill(random(i, n, t, j))
-       // rect(40, 50, 30, 30)
-
-// cool idea for project: randomness in headlines - headline roulette - playing off the craziness of what headlines are like nowadays
-// different random parts of a headline + a photo randomly chosen, with the hope of creating a cohesive article that looks maybe realistic
-//////////////////
-//var img;
+//idea: NRA money -- inflate representatives' heads according to how much they got from the NRA
 
 
-//function setup(){
-    //createCanvas(800,500);
+// skills needed: animate the scaling up of photos when the mouse comes over 
 
-   // img = loadImage('images/cnn.jpg');
-//}
-
-
-
-// if I could just get it to repost whatever product is made in postmessage
-//cool to add randomized photos too
-
-//  new code attempt!!!!
-
-
-//var backgroundColor;
-//var isOverRectangle;
-//var message;
-
-var button;
-
-var firstnames = ["Donald Trump", "Logan Paul", "Ellen Degeneres", "Oprah", "Putin", "Florida Man"]; //noun first
-var firstname = firstnames[Math.floor(Math.random() * firstnames.length)];
-var secondpart = [" has declared Uggs unpatriotic", " burns a village", " judges new episode of RuPaul's Drag Race", " hosts a Shrek-themed stripper party", " is spotted on a date with Margaret Atwood", " invites Ted Cruz on a Disney Cruise", " puked into Betty White's purse", " enslaves the human race", " is spotted on a date with Charlie Puth", " sheds a tear over a headless Barbie doll",]; // verb second
-var secondpart = secondpart[Math.floor(Math.random() * secondpart.length)];
-
-var message = "Breaking News: " + firstname + secondpart;
-var myFont;
-var song
 
 function preload(){
-  img = loadImage('images/cnn.jpg');
-  //myFont = loadFont('Source Sans Pro');
+ // people
+  img1 = loadImage('images/mccain.gif');
+  img2 = loadImage('images/burr.jpg');
+  img3 = loadImage('images/blunt.png');
+  img4 = loadImage('images/tillis.png');
+  img5 = loadImage('images/gardner.png');
+ //money bags!
+  img6 = loadImage('images/mccainmoney.jpg');
+  img7 = loadImage('images/burrmoney.jpg');
+  img8 = loadImage('images/bluntmoney.jpg');
+  img9 = loadImage('images/tillismoney.jpg');
+  img10 = loadImage('images/gardnermoney.jpg');
+
+  //flag
+
+  img11 = loadImage('images/flag.jpeg')
+}
+
+
+function setup(){
+  createCanvas(750, 450);
+  fill(0, 0, 0);
 
 }
- 
-function setup() {
-  // set canvas size
-  createCanvas(790, 440);
-  
-  button = createButton('News of 2018');
-  button.position(40, 20);
-  button.mousePressed(postmessage);
-  image(img, 0, 0, 800, 500);
-  //rect(300, 300, 30, 30);
-  
-  // default background color
-  //backgroundColor = color(255, 255, 255);
-}
+
+var x = 0.0;
+var y = 300;
+var speed = 0.5;
 
 function draw(){
   //background(0);
-  //var statement;
-  //text(message, 50, 390);
+  //fill(100, 100, 100);
+ // x += speed; 
+ var message = "Blood on your hands.";
+ text(message, 30, 40);
+ text(message, 30, 80);
+ text(message, 30, 120);
+ text(message, 30, 160);
+ text(message, 30, 200);
+ text(message, 30, 240);
+ text(message, 30, 280);
+ var money1 = "$7,740,521";
+ text(money1, 55, 310);
+
+ var message1 = "People kill people.";
+ text(message1, 160, 40);
+ text(message1, 160, 80);
+ text(message1, 160, 120);
+ text(message1, 160, 160);
+ text(message1, 160, 200);
+ text(message1, 160, 240);
+ text(message1, 160, 280);
+ var money2 = "$6,986,620";
+ text(money2, 178, 310);
+
+ var message1 = "Blood on your hands.";
+ text(message1, 280, 40);
+ text(message1, 280, 80);
+ text(message1, 280, 120);
+ text(message1, 280, 160);
+ text(message1, 280, 200);
+ text(message1, 280, 240);
+ text(message1, 280, 280);
+ var money3 = "$4,551,146";
+ text(money3, 307, 310);
+
+
+ var message1 = "People kill people.";
+ text(message1, 410, 40);
+ text(message1, 410, 80);
+ text(message1, 410, 120);
+ text(message1, 410, 160);
+ text(message1, 410, 200);
+ text(message1, 410, 240);
+ text(message1, 410, 280);
+ var money3 = "$4,418,012";
+ text(money3, 428, 310);
+
+ var message1 = "Blood on your hands.";
+ text(message1, 530, 40);
+ text(message1, 530, 80);
+ text(message1, 530, 120);
+ text(message1, 530, 160);
+ text(message1, 530, 200);
+ text(message1, 530, 240);
+ text(message1, 530, 280);
+ var money3 = "$3,879,064";
+ text(money3, 558, 310);
+
+ fill(0, 0, 0);
+ var message2 = "1 Circle = 1000 Lives";
+ text(message2, 300, 370);
+ var message3 = "2014-Present US Gun Deaths";
+ text(message3, 276, 350);
+
+ image(img1, 40, 80, 100, 120);
+ image(img2, 160, 80, 100, 120);
+ image(img3, 280, 80, 100, 120);
+ image(img4, 410, 80, 100, 120);
+ image(img5, 540, 80, 100, 120);
+
+ image(img11, 660, 5, 88, 290)
+
+
+ //background(255, 255, 255)
+ //2018
+ fill(255, 255, 0);
+ ellipse(x, 10, 3, 3);
+ ellipse(x, 15, 3, 3);
+//2017
+ fill(153, 255, 102);
+ ellipse(x, 20, 3, 3); //1
+ ellipse(x, 25, 3, 3);
+ ellipse(x, 30, 3, 3);
+ ellipse(x, 35, 3, 3);
+ ellipse(x, 40, 3, 3); //5
+ ellipse(x, 45, 3, 3);
+ ellipse(x, 50, 3, 3);
+ ellipse(x, 55, 3, 3);
+ ellipse(x, 60, 3, 3); //9
+ ellipse(x, 65, 3, 3); //10
+ ellipse(x, 70, 3, 3);
+ ellipse(x, 75, 3, 3);
+ ellipse(x, 80, 3, 3);
+ ellipse(x, 85, 3, 3);
+ ellipse(x, 90, 3, 3); //15
+
+//2016
+fill(255, 0, 0);
+ellipse(x, 95, 3, 3); //1
+ellipse(x, 100, 3, 3);
+ellipse(x, 105, 3, 3);
+ellipse(x, 110, 3, 3);
+ellipse(x, 115, 3, 3); //5
+ellipse(x, 120, 3, 3);
+ellipse(x, 125, 3, 3);
+ellipse(x, 130, 3, 3);
+ellipse(x, 135, 3, 3); //9
+ellipse(x, 140, 3, 3); //10
+ellipse(x, 145, 3, 3);
+ellipse(x, 150, 3, 3);
+ellipse(x, 155, 3, 3);
+ellipse(x, 160, 3, 3);
+ellipse(x, 165, 3, 3); //15
+
+
+//2015
+fill(0, 0, 255);
+ellipse(x, 170, 3, 3); //1
+ellipse(x, 175, 3, 3);
+ellipse(x, 180, 3, 3);
+ellipse(x, 185, 3, 3);
+ellipse(x, 190, 3, 3); //5
+ellipse(x, 195, 3, 3);
+ellipse(x, 200, 3, 3);
+ellipse(x, 205, 3, 3);
+ellipse(x, 210, 3, 3); //9
+ellipse(x, 215, 3, 3); //10
+ellipse(x, 220, 3, 3);
+ellipse(x, 225, 3, 3);
+ellipse(x, 230, 3, 3); //13
+
+//2014
+fill(255, 255, 255);
+ellipse(x, 235, 3, 3); //1
+ellipse(x, 240, 3, 3);
+ellipse(x, 245, 3, 3);
+ellipse(x, 250, 3, 3);
+ellipse(x, 255, 3, 3); //5
+ellipse(x, 260, 3, 3);
+ellipse(x, 265, 3, 3);
+ellipse(x, 270, 3, 3);
+ellipse(x, 275, 3, 3); //9
+ellipse(x, 280, 3, 3); //10
+ellipse(x, 285, 3, 3);
+ellipse(x, 290, 3, 3); //12
+
+
+ x = x + 0.1
+
+ fill(255,0,0);
+ 
 }
 
-function postmessage() {
-  var firstnames = ["Donald Trump", "Local Gym Teacher", "Larry Moneta", "Obama", "Taylor Swift", "Vincent Price", "Single Woman", "Small Dog", "Suburban Mom", "Local Teenager", "Drunk Man", "Logan Paul", "Daniel Radcliffe", "Ellen Degeneres", "Oprah", "Putin", "Florida Man"]; //noun first
-  var firstname = firstnames[Math.floor(Math.random() * firstnames.length)];
-  var secondpart = [" Has Declared Uggs Unpatriotic", " Reportedly Using Tinder", " Bites A Traffic Cop", " Goes On Strict Tide Pod Diet", " Advocates For Benefits Of Healing Crystals", " Has Strong Opinions On Name Of Kylie's Baby", " Says Trump Only Tweets When On Toilet", " Twerks Atop Statue In Downtown Chicago", " Catfishes James Franco", " Terrorizes Mothers At The Playground", " Sells Body To Elon Musk For 'Science'", " Burns A Village", " Smokes Mad Blunt", " Runs Into Oncoming Traffic", " Creates Massive Sinkhole", " Shaves Random Passerby's Back Hair", " Judges New Episode Of RuPaul's Drag Race", " Hosts A Shrek-Themed Stripper Party", " Is Spotted On A Date With Kim Jon-un", " Invites Ted Cruz On A Disney Cruise", " Pukes In Betty White's Purse", " Enslaves The Human Race", " Photographed Making Out With Mirror", " Sheds A Tear Over A Headless Barbie Doll",]; // verb second
-  var secondpart = secondpart[Math.floor(Math.random() * secondpart.length)];
-  //document.getElementById("recruit").textContent = "Breaking News: " + firstname + secondpart;
-  
-  console.log("helloooo");
-  image(img, 0, 0, 800, 500);
-  fill(153, 0, 0);
-  //textAlign(CENTER);
-  textFont('Source Sans Pro');
-  textSize(25);
-  text(firstname + secondpart, 48, 410);
-  console.log(firstname + secondpart);
-  
-};
- 
-//function draw() 
-//{
-  //background(img);
-  //text(message, 50, 300)
- 
-  // check if mouse is inside the rectangle
-  // mouseX >= x && mouseX <= x+width && mouseY >= y && mouseY <= y+height
-  //if (mouseX >= 150 && mouseX <= 150+100 && mouseY >= 150 && mouseY <= 150+100) 
-  //{
-   // isOverRectangle = true;
-  //} else {
-  //  isOverRectangle = false;
-  //}
-  
-  // draw a rectangle
-  //rectMode(CORNER);
-  //stroke(0);
-  //strokeWeight(5);
-  //f(isOverRectangle == true)
-  //{
-  //  fill(100);
-  //  cursor(HAND);
-  //} else {
-	//fill(200); 
-	//cursor(ARROW); 
-  //}
-  //rect(30, 295, 190, 90);
+// if each bullet equals 1000 people dead
+// 2018 already has 2
+// 2017 has 15
+// 2016 has 15
+// 2015 has 13
+// 2014 has 12
+
+
+//function draw(){
+// if (mouseIsPressed) {
+ //   image(img6, 50, 80, 90, 120);
+//  } else {
+//    image(img1, 50, 70, 90, 120);
+//  }
+
+ // print(mouseIsPressed);
   
 //}
- 
-//function mousePressed()
-//{
-    //var firstnames = ["Donald Trump", "Logan Paul", "Ellen Degeneres", "Oprah", "Putin", "Florida Man"]; //noun first
-    //var firstname = firstnames[Math.floor(Math.random() * firstnames.length)];
-    //var secondpart = [" has declared Uggs unpatriotic", " burns a village", " judges new episode of RuPaul's Drag Race", " hosts a Shrek-themed stripper party", " is spotted on a date with Margaret Atwood", " invites Ted Cruz on a Disney Cruise", " puked into Betty White's purse", " deports Santa's elves", " is spotted on a date with Charlie Puth", " sheds a tear over a headless Barbie doll",]; // verb second
-    //var secondpart = secondpart[Math.floor(Math.random() * secondpart.length)];
-  
-  
-    //if(isOverRectangle == true)
-  //{
-    //text("Breaking News")
-    //backgroundColor = color(random(255), random(255), random(255));
-    //message = "Breaking News" //random(firstnames) random(secondpart);
-  //}
-//}
+
