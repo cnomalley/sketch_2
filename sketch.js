@@ -112,6 +112,7 @@ function draw(){
  //background(255, 255, 255)
  //2018
  fill(255, 255, 0);
+ ellipse(x, 5, 3, 3);
  ellipse(x, 10, 3, 3);
  ellipse(x, 15, 3, 3);
 //2017
